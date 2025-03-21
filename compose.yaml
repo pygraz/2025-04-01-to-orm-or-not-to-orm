@@ -1,0 +1,15 @@
+# Minitrack docker containers and volumes for local development
+services:
+  postgres:
+    container_name: "minitrack_local_postgres"
+    image: "postgres:16" # Same as Ubuntu 24 LTS
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "${MT_POSTGRES_PORT:-5432}:5432"
+    environment:
+      POSTGRES_USER: "${MT_POSTGRES_USERNAME:-minitrack_local}"
+      POSTGRES_PASSWORD: "${MT_POSTGRES_PASSWORD:-deMo.123}"
+      POSTGRES_DB: "${MT_POSTGRES_DATABASE:-minitrack_local}"
+    env_file:
+      - "./.env"
