@@ -2,6 +2,11 @@
 
 This is a Python Django example application to show when how to use both Django's object relation mapping (ORM) and raw SQL for reporting in the same application.
 
+> [!NOTE]  
+> This repository and talk have been the basis for a more up-to-date talk at the
+> PyCon Austria. You can find the related slides and source code at
+> <https://github.com/roskakori/django-reporting-with-raw-sql>.
+
 ## Environment settings
 
 The project requires an environment file named `.env` to know about the [PostgreSQL](https://www.postgresql.org/) database settings and the preferred default password for demo data.
